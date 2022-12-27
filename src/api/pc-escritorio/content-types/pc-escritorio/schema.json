@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pcs_escritorios",
+  "info": {
+    "singularName": "pc-escritorio",
+    "pluralName": "pcs-escritorios",
+    "displayName": "PcsEscritorio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marca": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "modelo"
+    },
+    "almacenamiento": {
+      "type": "json"
+    },
+    "conectividad": {
+      "type": "json"
+    },
+    "ram": {
+      "type": "json"
+    },
+    "procesador": {
+      "type": "json"
+    },
+    "puertos": {
+      "type": "json"
+    },
+    "sistemaOperativo": {
+      "type": "json"
+    },
+    "usoRecomendado": {
+      "type": "json"
+    },
+    "graficos": {
+      "type": "json"
+    },
+    "precioLista": {
+      "type": "integer"
+    },
+    "oferta": {
+      "type": "boolean",
+      "default": false
+    },
+    "descuento": {
+      "type": "integer",
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "modelo": {
+      "type": "string"
+    }
+  }
+}

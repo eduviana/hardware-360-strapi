@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "impresoras",
+  "info": {
+    "singularName": "impresora",
+    "pluralName": "impresoras",
+    "displayName": "Impresoras",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marca": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "marca"
+    },
+    "especificaciones": {
+      "type": "json"
+    },
+    "precioLista": {
+      "type": "integer"
+    },
+    "descuento": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    },
+    "oferta": {
+      "type": "boolean",
+      "default": false
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Impresora Laser",
+        "Impresora Multifuncion Laser",
+        "Impresora Sistema Continuo",
+        "Impresora Inyección de Tinta"
+      ]
+    },
+    "modelo": {
+      "type": "string"
+    }
+  }
+}
